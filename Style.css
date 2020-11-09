@@ -1,0 +1,114 @@
+body {
+  margin: 0;
+  padding: 0;
+background: #0a060d;
+background: -moz-linear-gradient(top, black 2%, #414141 100%);
+background: -webkit-linear-gradient(top, black 2%, #414141 100%);
+background: linear-gradient(to bottom, black 2%, #414141 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='black', endColorstr='grey',GradientType=0 );
+}
+
+.nav ul {
+  list-style: none;
+  background-color: #000000;
+  text-align: center;
+  margin: 0;
+  opacity: 0.4;
+}
+.nav li {
+	font-weight: bold;
+  font-family: arial;
+  font-size: 14px;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid white;
+  
+}
+.nav a {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  -webkit-transition: .5s color; /*This is required for Safari Users */
+  transition: .5s color;
+}
+ 
+.nav a:hover {
+  color: #00ebff;
+}
+ 
+@media screen and (min-width: 600px) {
+  .nav li {
+    width: 170px;
+    border-bottom: none;
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+  }
+
+  .nav li {
+    display: inline-block;
+    margin-right: -7px;
+  }
+}
+/* Table Code */
+table, th, td {
+
+	border-left: 1px solid;
+	border-right: 1px solid;
+	border-color: #ffffff;
+	border-collapse: collapse;
+	margin-left: auto;
+	margin-right: auto;
+	color: #ffffff;
+	font-size: 13px;
+	font-family: arial;
+
+}
+th, td {
+	padding: 10px;
+	text-align: center;
+}
+th {
+	background-color: black;
+	color: white;
+    border-color: white;
+}	
+/* End Table Code */
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+a:active {
+    text-decoration: none;
+    color: white;
+}
+
+/* FOOTER STYLE */
+.footer {
+  position: relative;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #000000;
+  text-align: center;
+  border-top: solid;
+  border-top-color: #acacac;
+}
+.footer a
+{
+	color: white;
+	font-size: 11px;
+	font-family: arial;
+}

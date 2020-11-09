@@ -1,0 +1,264 @@
+<!DOCTYPE Html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="icon" href="Images\RAY_logo.ico">
+<link rel="stylesheet" type="text/css" href="Style.css">
+	<title>
+	R.A.Y Gaming Technology
+	</title>
+    
+<style>
+/* Slide show CSS */
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px; 
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.mySlides {
+display:none;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 2px;
+  width: 20px;
+  margin: 10px 0px;
+  background-color: #bbb;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Sliding animation */
+.slide {
+  -webkit-animation: slide 0.5s forwards;
+  -webkit-animation-delay: 2s;
+  animation: slide 0.5s forwards;
+  animation-delay: 2s;
+}
+
+@-webkit-keyframes slide {
+    100% { left: 0; }
+}
+
+@keyframes slide {
+    100% { left: 0; }
+}
+/* End of Slide show CSS */
+
+/* On smaller screens, decrease text size */
+@media only screen and (min-width: 600px) {
+.text {
+font-size: 11px
+}
+}
+    
+.category {
+	position:relative;
+	display: inline-block;
+	padding: 10px;
+}
+
+iframe {
+    position: relative;
+}
+
+.bnr {
+	background: black;
+	height: auto;
+	padding: 20px 300px; 
+	color: white;
+}      
+</style>
+</head>
+    
+<!--Menu bar-->
+<body>
+  <header>
+    <div class="nav">
+      <ul>
+        <li class="Home"><a href="Home.html">R.A.Y Home</a></li>
+        <li class="Specification"><a href="Spec.html">Specification</a></li>
+        <li class="Store"><a href="Store.html">Store</a></li>
+        <li class="Future"><a href="AboutUs.html">Future</a></li>
+        <li class="Support"><a href="Support.html">Support</a></li>
+      </ul>
+    </div>
+  </header>
+
+<!--Slideshow Code-->
+<div class="slideshow-container">
+<div class="mySlides slide">
+<a href="Store.html">
+  <img onmouseover="pauseCarousel();" onmouseout="startCarousel()" src="Images/Home/homebanner1.jpg" style="width:100%">
+</a>
+</div>
+
+<div class="mySlides slide">
+<a href="Spec.html#Monitor">
+  <img onmouseover="pauseCarousel();" onmouseout="startCarousel()" src="Images/Home/homebanner2.jpg" style="width:100%">
+</a>
+ </div>
+
+<div class="mySlides slide">
+<a href="Spec.html#Laptop">
+  <img onmouseover="pauseCarousel();" onmouseout="startCarousel()" src="Images/Home/homebanner3.jpg" style="width:100%">
+</a>
+  </div>
+  <a class="prev" onclick="plusSlides(-1)" nmouseover="pauseCarousel();" onmouseout="startCarousel()">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)" nmouseover="pauseCarousel();" onmouseout="startCarousel()">&#10095;</a>
+</div>
+    
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+	showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+	showSlides(slideIndex = n);
+}
+
+function pauseCarousel() {
+
+clearTimeout(t)
+
+}
+function startCarousel() {
+
+t = setTimeout(showSlides, timedelay);
+
+}
+
+//THE SCRIPT BELOW IS FOR THE SLIDESHOW CHANGING FROM THE BLUE BALL TO THE OTHER BLUE BALL
+
+function showSlides(n) {
+ //alert('showslides('+ n +')\nslideIndex='+slideIndex);
+  var i;
+  var slides = document.getElementsByClassName("mySlides"); //Get mySlides which is the CSS class
+  var dots = document.getElementsByClassName("dot"); //The dot at the bottom changes to which slide its on
+  if (n==undefined){n = ++slideIndex} //If n (Slides) is undefined add 1 to the slide index, which changes the slide
+  if (n > slides.length) {slideIndex = 1} //If the slide number is greater slide length, restart to slide 1
+  if (n < 1) {slideIndex = slides.length} //if slide number is less than one, set the index to the slide length
+  for (i = 0; i < slides.length; i++) { //a loop to go from slide 1-3
+      slides[i].style.display = "none"; 
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block"; //Display the slides in a block
+  dots[slideIndex-1].className += " active"; //
+  
+  setTimeout(showSlides, 5000); // Change the slide every 5 seconds
+}
+</script>
+
+<center>
+	<div class="category">
+	<a href="https://store.steampowered.com/app/359320/Elite_Dangerous/" target="_blank">
+    <img src="Images/Home/Ads/ad1.jpg" />  
+	</a>
+    </div>
+    <div class="category">
+	<a href="https://playoverwatch.com/en-us/" target="_blank">
+    <img src="Images/Home/Ads/ad2.jpg" />
+	</a>
+    </div>
+	<div class="category">
+	<a href="https://store.steampowered.com/app/292030/The_Witcher_3_Wild_Hunt/" target="_blank">
+    <img src="Images/Home/Ads/ad3.jpg" />
+	</a>
+	</div>
+</center>
+<br>
+<div class="bnr">
+
+<!-- VIDEO PLAYER -->
+<div id="iframe" align="center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3HvWZmIKfFA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
+</div>
+<br>
+<br>
+
+<!-- FOOTER TABLE -->
+
+<table style="width:60%"> <!-- A Little table we created at the bottom of the page for easy access once a user is at the bottom -->
+ <tr>
+ <th><a href="Spec.html">Specification</a></th> <!-- TH stands for table header (The main title of a table column) -->
+ <th><a href="Store.html">Store</a></th>
+ <th><a href="AboutUs.html">Future</a></th>
+ <th><a href="Support.html">Support</a></th>
+ </tr>
+ <tr>
+ <td><a href="Spec.html#Laptop">RAY GAMING Y250</a></td> <!-- TD stands for table data, data inside the column -->
+ <td><a href="Store.html">RAY GAMING Y250</a></td> <!-- Each links to the specific page, some of the link to an anchor point...-->
+ <td><a href="AboutUs.html">OUR FUTURE</a></td>
+ <td><a href="Support.html">FAQ</a></td>
+ </tr>
+ <tr>
+ <td><a href="Spec.html#Monitor">RAY1010</a></td>
+ <td><a href="Store.html">RAY1010</a></td>
+ <td><a href="#"></a></td>
+ <td><a href="Support.html#email">CONTACT US</a></td>
+ </tr>
+ <tr>
+ <td><a href="Spec.html#Headset">RAY BASSONIX</a></td>
+ <td><a href="https://store.steampowered.com/app/359320/Elite_Dangerous/">ELITE: DANGEROUS</a></td>
+ <td><a href="#"></a></td>
+ <td><a href="Support.html">HELP</a></td>
+ </tr>
+</table>
+
+<br>
+<br>
+
+<div class="footer">
+<a>
+R.A.Y. Copyright&copy; 2018 Intel&copy; Nvidia&copy; CO., LTD. All rights reserved. We recommend using the latest browser version.
+</a>
+</div>
+    
+</body>
+
+</html>
